@@ -1,0 +1,18 @@
+{
+  "loginTests": [
+    {
+      "title": "Valid login should succeed",
+      "tags": ["@smoke", "@regression"],
+      "username": "${VALID_USERNAME}",
+      "password": "${VALID_PASSWORD}",
+      "expected": { "type": "success", "contains": "secure" }
+    },
+    {
+      "title": "Invalid login should fail - wrong password",
+      "tags": ["@regression"],
+      "username": "${VALID_USERNAME}",
+      "password": "${INVALID_PASSWORD}",
+      "expected": { "type": "error", "contains": "invalid" }
+    }
+  ]
+}

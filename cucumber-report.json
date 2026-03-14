@@ -1,0 +1,199 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 415371499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on the login page",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9988063300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter valid username and password",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 666027199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click the login button",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should be redirected to the secure area",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32428000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I should see a success message",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 238299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 238713200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;unsuccessful-login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Unsuccessful login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 384185499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the login page",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2898331000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter invalid username or password",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 622330200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the login button",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 975799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see an error message",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24642500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 221351999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Login Functionality",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "features\\smoke\\login.feature"
+  }
+]

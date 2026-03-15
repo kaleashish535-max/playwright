@@ -1,13 +1,18 @@
 name: Playwright Tests
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, ashish ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, ashish ]
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      VALID_USERNAME: tomsmith
+      VALID_PASSWORD: SuperSecretPassword!
+      INVALID_PASSWORD: wrong
+      BASE_URL: https://the-internet.herokuapp.com
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -19,9 +24,6 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
-    - name: Generate HTML report
-      run: npx playwright show-report --save
-      if: always()
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
